@@ -202,10 +202,7 @@ document.addEventListener("touchstart", e => touchStart(e));
 document.addEventListener("touchmove", e => touchMove(e));
 
 function touchStart(e) { 
-    if(window.innerHeight == pongGameCanvas.cv.height) {
-        console.log('fullscreen');
-        //openFullscreen(pongGameCanvas.cv);
-    }
+    openFullscreen(pongGameCanvas.cv);
     let rect = e.target.getBoundingClientRect();
     const x = e.targetTouches[0].pageX - rect.left;
     const y = e.targetTouches[0].pageY - rect.top;
